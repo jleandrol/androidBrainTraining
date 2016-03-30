@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="lao.treinacerebrosimples.MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/resOperacoes"
+        android:id="@+id/idLblOperacao"
+        android:layout_marginTop="30dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:text="99"
+        android:id="@+id/idBtn1"
+        android:layout_below="@+id/idLblOperacao"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="49dp" />
+
+    <Button
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:text="99"
+        android:id="@+id/idBtn2"
+        android:layout_alignTop="@+id/idBtn1"
+        android:layout_toRightOf="@+id/idBtn1"
+        android:layout_toEndOf="@+id/idBtn1" />
+
+    <Button
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:text="99"
+        android:id="@+id/idBtn3"
+        android:layout_alignTop="@+id/idBtn2"
+        android:layout_toRightOf="@+id/idBtn2"
+        android:layout_toEndOf="@+id/idBtn2" />
+
+    <Button
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:text="99"
+        android:id="@+id/idBtn4"
+        android:layout_alignTop="@+id/idBtn3"
+        android:layout_toRightOf="@+id/idBtn3"
+        android:layout_toEndOf="@+id/idBtn3" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/idLblStatus"
+        android:layout_below="@+id/idBtn2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Operações"
+        android:id="@+id/textView"
+        android:layout_below="@+id/idLblStatus"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="20dp"/>
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="adição"
+        android:id="@+id/idchkAdicao"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:checked="true" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="multiplicação"
+        android:id="@+id/idChkMultiplicacao"
+        android:checked="false"
+        android:layout_below="@+id/textView"
+        android:layout_toRightOf="@+id/idBtn2"
+        android:layout_toEndOf="@+id/idBtn2" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="subtração"
+        android:id="@+id/idChkSubtracao"
+        android:layout_below="@+id/idchkAdicao"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:checked="false" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="divisão"
+        android:id="@+id/idChkDivisao"
+        android:checked="false"
+        android:layout_below="@+id/idChkMultiplicacao"
+        android:layout_alignLeft="@+id/idChkMultiplicacao"
+        android:layout_alignStart="@+id/idChkMultiplicacao" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/idTxtMaior"
+        android:text="9"
+        android:layout_marginTop="52dp"
+        android:layout_below="@+id/idChkDivisao"
+        android:layout_toRightOf="@+id/textView2"
+        android:layout_alignRight="@+id/idLblStatus"
+        android:layout_alignEnd="@+id/idLblStatus"
+        android:layout_marginLeft="10dp"/>
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Aplicar"
+        android:id="@+id/idAplicar"
+        android:layout_alignTop="@+id/idTxtMaior"
+        android:layout_toRightOf="@+id/idBtn3"
+        android:layout_toEndOf="@+id/idBtn3" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Maior valor \ndo operador"
+        android:id="@+id/textView2"
+        android:layout_alignBottom="@+id/idAplicar"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+</RelativeLayout>
